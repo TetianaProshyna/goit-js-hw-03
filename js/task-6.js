@@ -1,7 +1,3 @@
-// Напиши функцию calculateTotalPrice(allProdcuts, productName),
-//   которая получает массив объектов и имя продукта(значение свойства name).
-// Возвращает общую стоимость продукта(цена * количество).
-
 const products = [
   { name: 'Радар', price: 1300, quantity: 4 },
   { name: 'Сканер', price: 2700, quantity: 3 },
@@ -10,7 +6,13 @@ const products = [
 ];
 
 const calculateTotalPrice = function (allProdcuts, productName) {
-  // твой код
+  let total = 0;
+  for (const product of allProdcuts) {
+    if (product.name === productName) {
+      total = product.price * product.quantity;
+    }
+  }
+  return total;
 };
 
 /*
